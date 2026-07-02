@@ -4,14 +4,14 @@
         
     <!-- Main Landing Page -->
     <url>
-        <loc>https://nerdsip.com/stepaway/</loc>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://nerdsip.com/stepaway/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://nerdsip.com/stepaway/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://nerdsip.com/stepaway/de/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://nerdsip.com/stepaway/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://nerdsip.com/stepaway/fr/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://nerdsip.com/stepaway/ja/" />
-        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nerdsip.com/stepaway/zh-Hans/" />
+        <loc>https://themansigoel.github.io/stepaway/</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://themansigoel.github.io/stepaway/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://themansigoel.github.io/stepaway/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://themansigoel.github.io/stepaway/de/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://themansigoel.github.io/stepaway/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://themansigoel.github.io/stepaway/fr/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://themansigoel.github.io/stepaway/ja/" />
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://themansigoel.github.io/stepaway/zh-Hans/" />
         <lastmod>2026-06-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -19,14 +19,14 @@
 
     <!-- Contact Page -->
     <url>
-        <loc>https://nerdsip.com/stepaway/contact.html</loc>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://nerdsip.com/stepaway/contact.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://nerdsip.com/stepaway/contact.html" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://nerdsip.com/stepaway/de/contact.html" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://nerdsip.com/stepaway/es/contact.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://nerdsip.com/stepaway/fr/contact.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://nerdsip.com/stepaway/ja/contact.html" />
-        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nerdsip.com/stepaway/zh-Hans/contact.html" />
+        <loc>https://themansigoel.github.io/stepaway/contact.html</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://themansigoel.github.io/stepaway/contact.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://themansigoel.github.io/stepaway/contact.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://themansigoel.github.io/stepaway/de/contact.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://themansigoel.github.io/stepaway/es/contact.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://themansigoel.github.io/stepaway/fr/contact.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://themansigoel.github.io/stepaway/ja/contact.html" />
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://themansigoel.github.io/stepaway/zh-Hans/contact.html" />
         <lastmod>2026-06-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
@@ -34,14 +34,14 @@
 
     <!-- Privacy Policy Page -->
     <url>
-        <loc>https://nerdsip.com/stepaway/privacy.html</loc>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://nerdsip.com/stepaway/privacy.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://nerdsip.com/stepaway/privacy.html" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://nerdsip.com/stepaway/de/privacy.html" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://nerdsip.com/stepaway/es/privacy.html" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://nerdsip.com/stepaway/fr/privacy.html" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://nerdsip.com/stepaway/ja/privacy.html" />
-        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nerdsip.com/stepaway/zh-Hans/privacy.html" />
+        <loc>https://themansigoel.github.io/stepaway/privacy.html</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://themansigoel.github.io/stepaway/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://themansigoel.github.io/stepaway/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://themansigoel.github.io/stepaway/de/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://themansigoel.github.io/stepaway/es/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://themansigoel.github.io/stepaway/fr/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://themansigoel.github.io/stepaway/ja/privacy.html" />
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://themansigoel.github.io/stepaway/zh-Hans/privacy.html" />
         <lastmod>2026-06-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
@@ -49,9 +49,9 @@
 
     <!-- Guide: How to Automate 20-20-20 Rule on macOS -->
     <url>
-        <loc>https://nerdsip.com/stepaway/how-to-automate-20-20-20-rule-mac.html</loc>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://nerdsip.com/stepaway/how-to-automate-20-20-20-rule-mac.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://nerdsip.com/stepaway/how-to-automate-20-20-20-rule-mac.html" />
+        <loc>https://themansigoel.github.io/stepaway/how-to-automate-20-20-20-rule-mac.html</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://themansigoel.github.io/stepaway/how-to-automate-20-20-20-rule-mac.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://themansigoel.github.io/stepaway/how-to-automate-20-20-20-rule-mac.html" />
         <lastmod>2026-07-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -59,9 +59,9 @@
 
     <!-- Guide: Reduce Computer Eye Strain for Developers -->
     <url>
-        <loc>https://nerdsip.com/stepaway/reduce-computer-eye-strain-developers.html</loc>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://nerdsip.com/stepaway/reduce-computer-eye-strain-developers.html" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://nerdsip.com/stepaway/reduce-computer-eye-strain-developers.html" />
+        <loc>https://themansigoel.github.io/stepaway/reduce-computer-eye-strain-developers.html</loc>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://themansigoel.github.io/stepaway/reduce-computer-eye-strain-developers.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://themansigoel.github.io/stepaway/reduce-computer-eye-strain-developers.html" />
         <lastmod>2026-07-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

@@ -3,9 +3,9 @@
 StepAway is a native, lightweight, and privacy-first macOS break timer and digital wellness assistant designed to prevent screen-induced eye strain and fatigue.
 
 - **Download on App Store**: https://apps.apple.com/us/app/step-away-digital-wellness/id6754695723
-- **Official Website**: https://nerdsip.com/stepaway/
-- **Privacy Policy**: https://nerdsip.com/stepaway/privacy.html
-- **Support & Contact**: https://nerdsip.com/stepaway/contact.html
+- **Official Website**: https://themansigoel.github.io/stepaway/
+- **Privacy Policy**: https://themansigoel.github.io/stepaway/privacy.html
+- **Support & Contact**: https://themansigoel.github.io/stepaway/contact.html
 
 ---
 
