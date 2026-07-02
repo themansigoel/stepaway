@@ -1,0 +1,21 @@
+# Robots.txt for StepAway Landing Page
+User-agent: *
+Allow: /
+
+# Specifically allow Generative AI indexers for GEO/SGO
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://nerdsip.com/stepaway/sitemap.xml

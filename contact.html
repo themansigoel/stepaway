@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — StepAway for macOS</title>
+    <meta name="description" content="Get in touch with StepAway. Contact us for feedback, feature requests, or technical support regarding smart break timers.">
+    <link rel="canonical" href="https://nerdsip.com/stepaway/contact.html" />
+    
+    <!-- Favicon & Device Icons -->
+    <link rel="icon" type="image/png" href="assets/app_icon.png">
+    <link rel="apple-touch-icon" href="assets/app_icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Multi-locale Indexing Tags -->
+    <link rel="alternate" hreflang="x-default" href="https://nerdsip.com/stepaway/contact.html" />
+    <link rel="alternate" hreflang="en" href="https://nerdsip.com/stepaway/contact.html" />
+    <link rel="alternate" hreflang="de" href="https://nerdsip.com/stepaway/de/contact.html" />
+    <link rel="alternate" hreflang="es" href="https://nerdsip.com/stepaway/es/contact.html" />
+    <link rel="alternate" hreflang="fr" href="https://nerdsip.com/stepaway/fr/contact.html" />
+    <link rel="alternate" hreflang="ja" href="https://nerdsip.com/stepaway/ja/contact.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://nerdsip.com/stepaway/zh-Hans/contact.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nerdsip.com/stepaway/contact.html">
+    <meta property="og:title" content="Contact Us — StepAway for macOS">
+    <meta property="og:description" content="Get in touch with StepAway. Contact us for feedback, feature requests, or technical support regarding smart break timers.">
+    <meta property="og:image" content="assets/screenshot_general.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nerdsip.com/stepaway/contact.html">
+    <meta property="twitter:title" content="Contact Us — StepAway for macOS">
+    <meta property="twitter:description" content="Get in touch with StepAway. Contact us for feedback, feature requests, or technical support regarding smart break timers.">
+    <meta property="twitter:image" content="assets/screenshot_general.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data for SEO / GEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "StepAway Contact Us",
+      "description": "Contact form and communication page for StepAway macOS wellness application.",
+      "url": "https://nerdsip.com/stepaway/contact.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "StepAway",
+        "url": "https://nerdsip.com/stepaway/",
+        "logo": "https://nerdsip.com/stepaway/assets/app_icon.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "support",
+          "email": "support@nerdsip.com",
+          "availableLanguage": "en"
+        }
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link" id="nav-logo">
+                <img src="assets/app_icon.png" alt="StepAway Logo" class="nav-logo-img" width="36" height="36">
+                <span class="nav-brand">StepAway</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#comparison">Compare Apps</a>
+                <a href="index.html#article">Science of Breaks</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="https://apps.apple.com/us/app/step-away-digital-wellness/id6754695723" class="btn btn-secondary nav-btn" id="nav-download-btn">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px; padding-bottom: 80px;">
+        <section class="container" style="max-width: 650px;">
+            <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 24px; padding: 48px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+                <div id="contact-content-block">
+                    <span class="badge" style="margin-bottom: 16px; display: inline-block;">Get In Touch</span>
+                    <h1 style="font-family: 'Outfit', sans-serif; font-size: 2.5rem; margin-bottom: 16px; font-weight: 700; background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Contact Us</h1>
+                    <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 32px; line-height: 1.6;">Have questions, feature requests, or need technical support? Drop us a message below and we'll get back to you shortly.</p>
+
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="name" style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe" style="background: #ffffff; border: 1px solid var(--bg-card-border); border-radius: 12px; padding: 14px; font-size: 1rem; color: var(--text-main); font-family: inherit; transition: var(--transition-smooth); outline: none;">
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="email" style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com" style="background: #ffffff; border: 1px solid var(--bg-card-border); border-radius: 12px; padding: 14px; font-size: 1rem; color: var(--text-main); font-family: inherit; transition: var(--transition-smooth); outline: none;">
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="subject" style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Feature Request / Support" style="background: #ffffff; border: 1px solid var(--bg-card-border); border-radius: 12px; padding: 14px; font-size: 1rem; color: var(--text-main); font-family: inherit; transition: var(--transition-smooth); outline: none;">
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="message" style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?" style="background: #ffffff; border: 1px solid var(--bg-card-border); border-radius: 12px; padding: 14px; font-size: 1rem; color: var(--text-main); font-family: inherit; transition: var(--transition-smooth); outline: none; resize: vertical;"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%; border: none;">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Success Message (hidden initially) -->
+                <div id="success-message" style="display: none; text-align: center; padding: 20px 0;">
+                    <div style="font-size: 4.5rem; margin-bottom: 20px;">✉️</div>
+                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; color: var(--text-main);">Message Sent!</h3>
+                    <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 32px; font-size: 1.05rem;">Thank you for reaching out. We have received your message and will get back to you at the email provided within 24 hours.</p>
+                    <button class="btn btn-secondary" onclick="resetContactForm()" style="padding: 10px 24px; border-radius: 30px;">Send Another Message</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand-side">
+                <div class="footer-logo">
+                    <img src="assets/app_icon.png" alt="StepAway Logo" class="footer-logo-img" width="32" height="32">
+                    <span>StepAway</span>
+                </div>
+                <p class="footer-credit">Built natively for macOS to foster healthy workspaces.</p>
+            </div>
+            <div class="footer-links-side">
+                <div class="footer-link-group">
+                    <h4>Product</h4>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#comparison">Compare</a>
+                    <a href="https://apps.apple.com/us/app/step-away-digital-wellness/id6754695723">App Store</a>
+                </div>
+                <div class="footer-link-group">
+                    <h4>Legal & Privacy</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 StepAway. All rights reserved. macOS and App Store are trademarks of Apple Inc.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Simple input focus styling
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.style.borderColor = 'var(--primary)';
+                input.style.boxShadow = '0 0 10px rgba(13, 148, 136, 0.2)';
+            });
+            input.addEventListener('blur', () => {
+                input.style.borderColor = 'var(--bg-card-border)';
+                input.style.boxShadow = 'none';
+            });
+        });
+
+        // Form Submit Handler (AJAX via FormSubmit.co)
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            fetch('https://formsubmit.co/ajax/themansigoel@gmail.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success === "true" || data.success === true) {
+                    document.getElementById('contact-content-block').style.display = 'none';
+                    document.getElementById('success-message').style.display = 'block';
+                } else {
+                    alert('Oops! Something went wrong. Please try again.');
+                    submitBtn.innerText = 'Send Message';
+                    submitBtn.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Oops! Network error. Please check your connection and try again.');
+                submitBtn.innerText = 'Send Message';
+                submitBtn.disabled = false;
+            });
+        }
+
+        // Form Reset Handler
+        function resetContactForm() {
+            document.getElementById('contact-form').reset();
+            document.getElementById('success-message').style.display = 'none';
+            document.getElementById('contact-content-block').style.display = 'block';
+            
+            const submitBtn = document.querySelector('#contact-form button[type="submit"]');
+            submitBtn.innerText = 'Send Message';
+            submitBtn.disabled = false;
+        }
+    </script>
+</body>
+</html>

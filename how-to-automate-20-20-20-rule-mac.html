@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Automate the 20-20-20 Rule on macOS | StepAway</title>
+    <meta name="description" content="Automate the 20-20-20 rule on Mac to prevent screen eye strain. StepAway is a native macOS timer that auto-pauses during meetings for seamless habits.">
+    <link rel="canonical" href="https://nerdsip.com/stepaway/how-to-automate-20-20-20-rule-mac.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nerdsip.com/stepaway/how-to-automate-20-20-20-rule-mac.html">
+    <meta property="og:title" content="How to Automate the 20-20-20 Rule on macOS | StepAway">
+    <meta property="og:description" content="Automate the 20-20-20 rule on Mac to prevent screen eye strain. StepAway is a native macOS timer that auto-pauses during meetings for seamless habits.">
+    <meta property="og:image" content="assets/screenshot_general.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 120px auto 80px auto;
+            padding: 0 24px;
+        }
+        .article-header {
+            margin-bottom: 40px;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .article-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #334155;
+        }
+        .article-content h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 40px 0 16px 0;
+            color: var(--text-main);
+        }
+        .article-content p {
+            margin-bottom: 24px;
+        }
+        .article-content ul {
+            margin: 0 0 24px 24px;
+        }
+        .article-content li {
+            margin-bottom: 12px;
+        }
+        .callout-box {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 32px 0;
+        }
+        .callout-box h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link" id="nav-logo">
+                <img src="assets/app_icon.png" alt="StepAway Logo" class="nav-logo-img" width="36" height="36">
+                <span class="nav-brand">StepAway</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#gallery">Screenshots</a>
+                <a href="index.html#comparison">Compare Apps</a>
+                <a href="index.html#faq">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://apps.apple.com/us/app/step-away-digital-wellness/id6754695723" class="btn btn-secondary nav-btn" id="nav-download-btn">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <article class="article-container">
+        <div class="article-header">
+            <div class="article-meta">Published under Digital Wellness &bull; 5 Min Read</div>
+            <h1 class="article-title">How to Automate the 20-20-20 Rule on macOS</h1>
+            <p style="font-size: 1.2rem; color: var(--text-muted); line-height: 1.6;">Automating your eye breaks is the most effective way to prevent digital eye strain, fatigue, and headaches without breaking your focus or coding sessions.</p>
+        </div>
+        
+        <div class="article-content">
+            <p>If you spend more than four hours a day staring at a computer screen, you have likely experienced dry eyes, blurry vision, or mild headaches. These are classic symptoms of <strong>Computer Vision Syndrome (CVS)</strong>. The most widely recommended solution by optometrists is the <strong>20-20-20 rule</strong>.</p>
+            
+            <p>The rule is simple: <em>Every 20 minutes, look at something at least 20 feet away for at least 20 seconds.</em></p>
+            
+            <p>While the concept is straightforward, remembering to actually do it while deep in a coding session or design loop is nearly impossible. That is where automation comes in.</p>
+
+            <h2>Why Traditional Timers Fail</h2>
+            <p>Most developers try to solve this by setting simple kitchen timers, using phone alarms, or running basic cron scripts. However, these solutions quickly fail for two reasons:</p>
+            <ul>
+                <li><strong>Rigid Interruption:</strong> A basic timer does not know when you are in the middle of a Zoom call or actively typing, leading to frustrating interruptions that you will eventually force-quit.</li>
+                <li><strong>System Bloat:</strong> Web-based or Electron-based timers consume valuable RAM and CPU cycles, slowing down your IDE and build times.</li>
+            </ul>
+
+            <div class="callout-box">
+                <h4>Automate with StepAway</h4>
+                <p>StepAway is a native macOS menu bar app designed specifically to solve this. Built in pure Swift/SwiftUI, it runs locally on less than 25MB of RAM with zero tracking or account requirements.</p>
+            </div>
+
+            <h2>How StepAway Automates Your Eye Care</h2>
+            <p>StepAway runs silently in your Mac's menu bar and monitors your work patterns in the background:</p>
+            <ul>
+                <li><strong>Intelligent Idle Detection:</strong> If you walk away to grab water, StepAway detects your keyboard inactivity and automatically resets the 20-minute timer.</li>
+                <li><strong>Meeting Awareness:</strong> If you are sharing your screen, presenting, or in a video call (Zoom, Teams, Slack), StepAway automatically holds off on notifications until your call ends.</li>
+                <li><strong>Guided Stretches:</strong> During breaks, the app displays micro-exercises designed to stimulate your ciliary eye muscles, encouraging healthy blinking and tear generation.</li>
+            </ul>
+
+            <h2>Setting Up Your First Automations</h2>
+            <p>Getting started is simple. Download StepAway, open the settings from the menu bar icon, and configure your intervals. Set your short break interval to 20 minutes and the duration to 20 seconds. Toggle on "Meeting Awareness" and "Idle Detection" to ensure the timer fits your workflow, not the other way around.</p>
+            
+            <p style="margin-top: 40px; text-align: center;">
+                <a href="https://apps.apple.com/us/app/step-away-digital-wellness/id6754695723" class="btn btn-primary">Download StepAway on the App Store</a>
+            </p>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer style="background: #0f172a; color: #94a3b8; padding: 40px 0; font-size: 0.9rem; border-top: 1px solid #1e293b;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <p>&copy; 2026 StepAway. All rights reserved.</p>
+            <div style="display: flex; gap: 24px;">
+                <a href="index.html" style="color: #94a3b8; text-decoration: none;">Home</a>
+                <a href="privacy.html" style="color: #94a3b8; text-decoration: none;">Privacy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

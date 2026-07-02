@@ -1,0 +1,21 @@
+{
+  "name": "StepAway — Native Mac Break Timer, Eye Care & Pomodoro Menu Bar App",
+  "short_name": "StepAway",
+  "description": "Prevent screen eye strain on MacBook. StepAway is a native, lightweight, and meeting-aware Mac break timer and Pomodoro app that tracks desk activity.",
+  "icons": [
+    {
+      "src": "assets/app_icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/app_icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0d9488",
+  "background_color": "#0f172a",
+  "display": "standalone",
+  "start_url": "/stepaway/"
+}
