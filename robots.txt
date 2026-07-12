@@ -18,4 +18,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://themansigoel.github.io/stepaway/sitemap.xml
+Sitemap: https://nerdsip.com/stepaway/sitemap.xml
