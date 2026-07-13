@@ -6,7 +6,7 @@
     --bg-card: #ffffff;
     --bg-card-border: #e2e8f0;
     --text-main: #0f172a;
-    --text-muted: #64748b;
+    --text-muted: #475569;
     --primary: #0d9488; /* Fresh Teal */
     --primary-dark: #0f766e;
     --primary-light: #f0fdfa; /* Mint tint */
@@ -610,7 +610,7 @@ body {
     gap: 16px;
 }
 
-.footer-link-group h4 {
+.footer-link-group h3 {
     color: #fff;
     font-family: 'Outfit', sans-serif;
     font-size: 0.95rem;

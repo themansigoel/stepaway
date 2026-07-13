@@ -41,7 +41,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"></noscript>
 
     <!-- JSON-LD Structured Data for SEO / GEO -->
     <script type="application/ld+json">
@@ -139,7 +140,7 @@
                     <div class="hero-ctas" style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 24px;">
                         <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
                             <a href="https://apps.apple.com/us/app/step-away-digital-wellness/id6754695723" id="hero-cta-download" style="display: inline-block; transition: var(--transition-smooth);" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-mac-app-store.svg" alt="Download on the Mac App Store" style="height: 52px; width: auto; vertical-align: middle;">
+                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-mac-app-store.svg" alt="Download on the Mac App Store" style="height: 52px; width: 156px; vertical-align: middle; aspect-ratio: 156 / 52;" width="156" height="52">
                             </a>
                             <button class="btn btn-secondary" onclick="startWebDemo()" style="padding: 14px 28px; border-radius: 30px; font-weight: 700;">Preview a Break</button>
                             <a href="#comparison" class="btn btn-tertiary">See Comparison</a>
@@ -148,7 +149,7 @@
                     </div>
                 </div>
                 <div class="hero-media-content">
-                    <img src="assets/1_Screenshot.png" alt="StepAway macOS Application General Settings" class="hero-mockup-img" id="hero-graphic" style="height: auto;" width="800" height="600">
+                    <img src="assets/1_Screenshot.webp" alt="StepAway macOS Application General Settings" class="hero-mockup-img" id="hero-graphic" style="width: 100%; height: auto; max-width: 800px; aspect-ratio: 800 / 500;" width="800" height="500">
                 </div>
             </div>
         </section>
@@ -194,19 +195,19 @@
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 40px;">
                     <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';">
-                        <img src="assets/2_Screenshot.png" alt="StepAway Menu Bar Dropdown" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="600">
+                        <img src="assets/2_Screenshot.webp" alt="StepAway Menu Bar Dropdown" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="500">
                         <p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">Quick Access Status Menu Bar</p>
                     </div>
                     <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';">
-                        <img src="assets/3_Screenshot.png" alt="StepAway Posture HUD" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="600">
+                        <img src="assets/3_Screenshot.webp" alt="StepAway Posture HUD" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="500">
                         <p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">Beautiful Posture Reminders</p>
                     </div>
                     <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';">
-                        <img src="assets/4_Screenshot.png" alt="StepAway Break Settings" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="600">
+                        <img src="assets/4_Screenshot.webp" alt="StepAway Break Settings" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="500">
                         <p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">Breaks Scheduling & Duration</p>
                     </div>
                     <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';">
-                        <img src="assets/5_Screenshot.png" alt="StepAway Activity Heatmap" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="600">
+                        <img src="assets/5_Screenshot.webp" alt="StepAway Activity Heatmap" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="500">
                         <p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">GitHub-Style Activity Heatmap</p>
                     </div>
                 </div>
@@ -465,13 +466,13 @@
             </div>
             <div class="footer-links-side">
                 <div class="footer-link-group">
-                    <h4>Product</h4>
+                    <h3>Product</h3>
                     <a href="#features">Features</a>
                     <a href="#comparison">Compare</a>
                     <a href="https://apps.apple.com/us/app/step-away-digital-wellness/id6754695723">App Store</a>
                 </div>
                 <div class="footer-link-group">
-                    <h4>Legal & Privacy</h4>
+                    <h3>Legal & Privacy</h3>
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="contact.html">Contact Us</a>
                 </div>
