@@ -31,11 +31,11 @@ xcodebuild -project /Users/rahulgoel/smartbreakapp/StepAway.xcodeproj -scheme St
 ```
 > **Goal:** 35/35 PASSED (100% Success with real-time percentage progress bar).
 
-### 3. Run Live Interactive UI Walkthrough & Mutation Suite (`--demo-all-ui`)
+### 3. Run Human-Like Master End-to-End Suite (`--e2e-human-test` / `--demo-all-ui`)
 ```bash
-open -a /Users/rahulgoel/smartbreakapp/build/DerivedData/Build/Products/Debug/StepAway.app --args --demo-all-ui
+/Users/rahulgoel/smartbreakapp/build/DerivedData/Build/Products/Debug/StepAway.app/Contents/MacOS/StepAway --e2e-human-test
 ```
-> **Goal:** Launches foreground app window, drags break sliders, toggles safeguards, updates sound dropdowns, navigates all 6 sidebar tabs, and presents all 4 HUD overlays on screen.
+> **Goal:** 10/10 Phases PASSED (100% Success). Foreground window activation, slider dragging, stepper interaction, safeguard toggling, exercise CRUD, sound menus, streak validation, Focus Pomodoro, smart lighting, and all 4 HUD overlays.
 
 ---
 
@@ -82,4 +82,35 @@ When asked in chat to review, audit, research keywords, check rankings, or updat
 
 # 7. Launch the local web dashboard:
 /Users/rahulgoel/aso-intelligence/aso dash
+```
+
+---
+
+## 🗄️ Centralized ASO Intelligence Database (`aso_intelligence.db`)
+
+All intelligence across Step Away and the portfolio is stored in SQLite at `~/.vibe-aso/aso_intelligence.db` (and versioned in `/Users/rahulgoel/aso-intelligence/data/aso_intelligence.db`):
+
+| Table Name | Description | Step Away Focus |
+|---|---|---|
+| `app_portfolio_snapshots` | Master app records & ratings | App ID `6754695723`, live version `1.7.0`, macOS Health & Fitness |
+| `app_sales_reports` | Daily sales, downloads & IAPs | 68 Mac downloads, $46.92 proceeds in last 14 days |
+| `app_store_impressions` | Daily impressions history | 6,217 impressions across 160 days (avg 38.9/day, peak 689) |
+| `app_worldwide_ratings` | Ratings across 25 storefronts | 7 in-depth written reviews in ASC (100% 5.0 ★) |
+| `autocomplete_suggestions` | Apple Search typed hints | 3,310 suggestions (`break reminder`, `neck stretch`, `eye strain`) |
+| `competitor_keywords` | Competitor metadata & ratings | 1,234 competitors tracked |
+| `customer_reviews` | Live customer reviews from ASC | 7 reviews (100% 5.0 ★ — Man.Osm, therahulgoel, etc.) |
+| `keyword_difficulty` | 0-100 keyword difficulty scores | `break reminder` (64/100), `neck stretch` (0/100 Easy) |
+| `keyword_volume` | Search density & result proxies | 2,236 volume records |
+| `rank_snapshots` | Keyword rank trajectory | Global #1 macOS in US, IN, GB, DE, CA, AU, FR, JP, IT for `break reminder` |
+
+### Direct SQL Query Recipes for Step Away:
+```bash
+# Check live search rankings
+sqlite3 ~/.vibe-aso/aso_intelligence.db "SELECT country, keyword, rank, total_in_results FROM rank_snapshots WHERE app_id = '6754695723' AND recorded_at = (SELECT max(recorded_at) FROM rank_snapshots WHERE app_id = '6754695723') ORDER BY rank ASC;"
+
+# View daily sales and downloads
+sqlite3 ~/.vibe-aso/aso_intelligence.db "SELECT report_date, product_type_id, sum(units), sum(developer_proceeds), country FROM app_sales_reports WHERE app_id = '6754695723' OR sku LIKE '%smartbreak%' GROUP BY report_date, product_type_id, country ORDER BY report_date DESC LIMIT 20;"
+
+# View daily impressions history
+sqlite3 ~/.vibe-aso/aso_intelligence.db "SELECT date, impressions FROM app_store_impressions WHERE app_id = '6754695723' ORDER BY date DESC LIMIT 30;"
 ```
