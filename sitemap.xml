@@ -1,38 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Main Landing Page -->
     <url>
         <loc>https://themansigoel.github.io/stepaway/</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-
-    <!-- Guide: How to Automate 20-20-20 Rule on macOS -->
+    <url>
+        <loc>https://themansigoel.github.io/stepaway/guides/best-mac-break-timer-apps.html</loc>
+        <lastmod>2026-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <url>
         <loc>https://themansigoel.github.io/stepaway/how-to-automate-20-20-20-rule-mac.html</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
-    <!-- Guide: Reduce Computer Eye Strain for Developers -->
     <url>
         <loc>https://themansigoel.github.io/stepaway/reduce-computer-eye-strain-developers.html</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
-    <!-- Contact & Support Page -->
     <url>
         <loc>https://themansigoel.github.io/stepaway/contact.html</loc>
         <lastmod>2026-08-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
-
-    <!-- Privacy Policy Page -->
     <url>
         <loc>https://themansigoel.github.io/stepaway/privacy.html</loc>
         <lastmod>2026-08-30</lastmod>
