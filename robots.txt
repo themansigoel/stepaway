@@ -1,15 +1,18 @@
-# Robots.txt for StepAway Landing Page
+# Robots.txt — Search Engine & Generative AI Crawler Directives
 User-agent: *
 Allow: /
 
-# Specifically allow Generative AI indexers for GEO/SGO
+# Generative AI & Answer Engine Optimization (GEO / AEO)
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: Claude-Web
 Allow: /
 
 User-agent: PerplexityBot
@@ -18,4 +21,14 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# XML Sitemap
 Sitemap: https://themansigoel.github.io/stepaway/sitemap.xml
+
+# LLM Documentation Context
+# https://themansigoel.github.io/stepaway/llms.txt

@@ -1,59 +1,48 @@
-# Privacy Policy — StepAway
+# StepAway — macOS Digital Wellness & Focus Companion
 
-**Effective Date:** June 2, 2026
-
-Mansi Agarwal ("we", "our", or "us") built the **StepAway** macOS application (the "App") as a commercial software product. This page is used to inform users of our policies regarding the collection, use, and disclosure of personal information for anyone who chooses to use the App.
-
-By purchasing, downloading, or using StepAway, you agree to the terms of this Privacy Policy.
+**StepAway** is a native macOS menu bar app designed to combat screen fatigue, repetitive strain, and optic exhaustion with intelligent micro-breaks, spinal alignment reminders, and Pomodoro focus sessions.
 
 ---
 
-## 1. Information Collection and Use
+## 🌟 Core Features
 
-**StepAway is designed with a privacy-first architecture. We do not collect, store, transmit, or share any of your personal data.**
-
-*   **Local Storage only**: Any configuration settings, break intervals, focus session history, and break completion statistics are stored strictly locally on your Mac using macOS secure user preferences (`UserDefaults`).
-*   **No Personal Data Collected**: We do not collect any personally identifiable information (such as your name, email address, IP address, physical location, or contact list).
-*   **Camera/Screen Monitoring**: StepAway does not capture or monitor your screen contents or camera feed. Our meeting and flow-state detection features run locally on your device by checking active system state flags and typing intervals to determine if you are busy, without reading or storing the content of your communications.
-
----
-
-## 2. Third-Party Services
-
-To support standard App Store functionality, the App integrates with the following Apple and platform services:
-
-*   **Mac App Store (StoreKit)**: Transactions and purchases are processed directly by Apple. We do not store or have access to your credit card, billing address, or payment credentials.
-*   **RevenueCat**: We use RevenueCat to verify the status of your lifetime app purchase. This verification process is anonymous and does not link your device to any personal identity.
-*   **Firebase (Optional Diagnostics)**: StepAway may collect anonymous crash logs or basic launching metrics to help us fix bugs and improve performance. This data contains no personally identifiable information and cannot be traced back to you.
+- ⏱️ **Smart Work-Rest Scheduler:** Customizable short (20-20-20 rule) and long restorative break cycles.
+- 🧘 **Spine Align & Blink Guide:** Non-intrusive floating HUD micro-reminders for posture correction and eye relaxation.
+- 🎯 **Focus Mode (Pomodoro):** Wall-clock accurate deep work sessions with celebration overlays and seamless break transitions.
+- 📊 **Streak Tracking & Heatmap:** Interactive GitHub-style wellness heatmap and shareable progress cards.
+- 🛡️ **Privacy-First & Sandbox Compliant:** Zero network tracking, full local data storage, and intelligent camera meeting detection.
 
 ---
 
-## 3. Cookies
+## 🧪 Testing & Release QA
 
-Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. StepAway is a native desktop application and does not use cookies.
+The complete master release test suite is organized inside the [`tests/`](tests/) directory:
+
+### Run Automated 35-Test Assertion Suite
+```bash
+# Build and execute 35 automated assertion checks with progress bar
+xcodebuild -project /Users/rahulgoel/smartbreakapp/StepAway.xcodeproj -scheme StepAway -destination "platform=macOS" -derivedDataPath /Users/rahulgoel/smartbreakapp/build/DerivedData build
+
+/Users/rahulgoel/smartbreakapp/build/DerivedData/Build/Products/Debug/StepAway.app/Contents/MacOS/StepAway --auto-test
+```
+
+### Run Human-Like Master End-to-End Suite (`--e2e-human-test`)
+```bash
+# Runs full 10-phase interactive human walkthrough touching every tab, slider, HUD, and modal
+/Users/rahulgoel/smartbreakapp/build/DerivedData/Build/Products/Debug/StepAway.app/Contents/MacOS/StepAway --e2e-human-test
+
+# Or launch as GUI application
+open -a /Users/rahulgoel/smartbreakapp/build/DerivedData/Build/Products/Debug/StepAway.app --args --e2e-human-test
+```
+
+### Test Documentation
+- **Master Release QA Plan:** [`tests/RELEASE_TEST_SUITE.md`](tests/RELEASE_TEST_SUITE.md)
+- **AI Agent & Developer Guide:** [`AGENTS.md`](AGENTS.md)
 
 ---
 
-## 4. Security
+## 📄 Privacy Policy & Legal
 
-Because StepAway does not collect or transmit personal information over the internet, your personal data is not at risk of network breaches, server leaks, or unauthorized disclosure. Your data is as secure as your macOS device itself.
-
----
-
-## 5. Children's Privacy
-
-These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13, as no personal data is collected from any user of the App.
-
----
-
-## 6. Changes to This Privacy Policy
-
-We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
-
----
-
-## 7. Contact Us
-
-If you have any questions, suggestions, or support requests regarding this Privacy Policy or the StepAway app, please contact us at:
-
-*   **Support & Website**: [https://themansigoel.github.io/stepaway/](https://themansigoel.github.io/stepaway/)
+- **Privacy Policy:** [https://themansigoel.github.io/stepaway/privacy.html](https://themansigoel.github.io/stepaway/privacy.html)
+- **Support & Feedback:** [https://themansigoel.github.io/stepaway/](https://themansigoel.github.io/stepaway/)
+- **App Store:** [StepAway on the Mac App Store](https://apps.apple.com/us/app/step-away-digital-wellness/id6754695723)
