@@ -448,7 +448,60 @@
             </div>
         </section>
 
-    </main>
+    
+    <!-- Interactive 20-20-20 Timer Micro-Demo -->
+    <section id="interactive-timer-demo" style="max-width: 800px; margin: 40px auto; padding: 30px 20px; background: #f0fdf4; border: 2px solid #86efac; border-radius: 20px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+        <h2 style="color: #14532d; margin-top: 0; font-size: 1.8rem;">⏱️ Experience the 20-20-20 Rule Live</h2>
+        <p style="color: #166534; margin-bottom: 20px;">Click Start to run a 20-second guided eye rest & posture alignment preview.</p>
+        
+        <div style="background: #ffffff; border: 1px solid #bbf7d0; border-radius: 16px; padding: 25px; max-width: 350px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <div id="timer-display" style="font-size: 3rem; font-weight: 800; color: #16a34a; font-variant-numeric: tabular-nums;">00:20</div>
+            <div id="timer-instruction" style="color: #475569; font-size: 0.95rem; margin: 10px 0; min-height: 40px;">Look away from your screen at an object 20 feet away.</div>
+            <button id="timer-btn" onclick="toggleDemoTimer()" style="background: #16a34a; color: #fff; border: none; padding: 10px 24px; border-radius: 20px; font-weight: 700; cursor: pointer;">Start 20s Break</button>
+        </div>
+
+        <div style="margin-top: 25px; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+            <span style="color: #166534; font-weight: 600;">Want automatic, silent menu bar reminders all day on your Mac?</span>
+            <a href="https://apps.apple.com/app/break-reminder-step-away/id6754695723" style="background: #16a34a; color: #fff; padding: 10px 20px; border-radius: 20px; font-weight: 700; text-decoration: none;">Get Step Away on Mac App Store 🖥️</a>
+        </div>
+    </section>
+
+    <script>
+    let timerSeconds = 20;
+    let timerInterval = null;
+    function toggleDemoTimer() {
+        const btn = document.getElementById('timer-btn');
+        const display = document.getElementById('timer-display');
+        const instruction = document.getElementById('timer-instruction');
+        
+        if (timerInterval) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            timerSeconds = 20;
+            display.innerText = "00:20";
+            btn.innerText = "Start 20s Break";
+            instruction.innerText = "Look away from your screen at an object 20 feet away.";
+            return;
+        }
+        
+        btn.innerText = "Reset";
+        instruction.innerText = "👀 Relax your focus: blink softly and roll your shoulders back...";
+        timerInterval = setInterval(() => {
+            timerSeconds--;
+            display.innerText = "00:" + (timerSeconds < 10 ? "0" : "") + timerSeconds;
+            if (timerSeconds <= 0) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+                display.innerText = "✨ Done!";
+                instruction.innerText = "🎉 Eyes refreshed & spine aligned! Ready to return to work.";
+                btn.innerText = "Start Again";
+                timerSeconds = 20;
+            }
+        }, 1000);
+    }
+    </script>
+
+</main>
 
     <!-- Footer Section -->
     <footer class="footer">
