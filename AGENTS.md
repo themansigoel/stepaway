@@ -16,6 +16,21 @@ Welcome to the StepAway codebase. This document outlines the project architectur
 
 ---
 
+## 🛑 ZERO ASSUMPTION & STRICT REAL DATA MANDATE (CRITICAL FOR ALL AGENTS)
+
+Every agent, assistant, or automated workflow operating on this codebase MUST follow these rules:
+
+1. **NEVER Assume, Guess, or Extrapolate Code, Features, or Triggers**:
+   - Never state or assume that the app lacks a feature, review trigger, paywall tier, localization, or break timer logic without thoroughly searching and reading the actual source code call-sites across the entire codebase (e.g. `Breaks/`, `Settings/`, `Activity/`).
+   - Trace all function implementations AND all of their call sites before providing critique or recommendations.
+2. **Strict Real Data & API Verification Mandate**:
+   - NEVER invent, estimate, or extrapolate metrics (sales, units, proceeds, ratings, review counts, ranks, or keyword volumes).
+   - ALWAYS query the real App Store Connect API, live SQLite database (`~/.vibe-aso/aso_intelligence.db`), or `./aso` CLI before reporting numbers or drawing conclusions.
+3. **Always Verify Git & Release Context**:
+   - Check recent git commits (`git log`), release history (`PORTFOLIO_RELEASE_HISTORY.md`), and version release dates to understand when a feature went live before drawing conclusions about user adoption or rating velocity.
+
+---
+
 ## 🛠️ Automated Build & QA Testing Commands
 
 Every modification or pre-release QA cycle must run and pass the master test suites located in `tests/`:
@@ -55,34 +70,54 @@ Refer to [`tests/RELEASE_TEST_SUITE.md`](tests/RELEASE_TEST_SUITE.md) for the co
 
 ## 🍎 ASO Intelligence, Pricing & Growth Suite Integration
 
-This app is centrally managed by the **ASO Intelligence Suite** at `/Users/rahulgoel/aso-intelligence`.
+All App Store analytics, rankings, keyword optimization, metadata synchronization, and TestFlight deployments for **Step Away** are centrally managed by the **ASO Intelligence Suite** at `/Users/rahulgoel/aso-intelligence`.
 
-When asked in chat to review, audit, research keywords, check rankings, or update pricing for this app, execute the corresponding `./aso` command from the intelligence suite:
+Whenever you need to review rankings, analyze sales, optimize keywords, or deploy builds:
 
 ```bash
-# 1. Check live search rankings on demand:
-/Users/rahulgoel/aso-intelligence/aso track 6754695723 "break reminder" "neck stretch" "eye break" --country us
+# 1. Daily morning briefing (sales, rank gainers/losers, review alerts):
+/Users/rahulgoel/aso-intelligence/aso morning
 
-# 2. Run full multithreaded rank, volume, and competitor intelligence scan:
+# 2. Algorithmic ASO optimizer (removes deadweight keywords, generates 100-char knapsack):
+/Users/rahulgoel/aso-intelligence/aso optimize step_away [--apply]
+
+# 3. 1-Command Automated TestFlight Deployment (bump, build, sign, upload, poll):
+/Users/rahulgoel/aso-intelligence/aso tf smartbreakapp
+
+# 4. Check live search rankings on demand:
+/Users/rahulgoel/aso-intelligence/aso track 6754695723 "break reminder" "neck stretch" "stretch reminder" --country us
+/Users/rahulgoel/aso-intelligence/aso track 6754695723 "break reminder" "stretch reminder" --country au
+
+# 5. Run full 8-phase intelligence scan (ranks, volume, competitors, autocompletes, difficulty):
 /Users/rahulgoel/aso-intelligence/aso scan
 
-# 3. Harvest high-converting search terms & auto-apply to organic metadata:
+# 6. Real App Store Connect sales & proceeds sync (multi-currency conversion):
+/Users/rahulgoel/aso-intelligence/aso sales
+
+# 7. Harvest Apple search autocompletes & high-converting search terms:
+/Users/rahulgoel/aso-intelligence/aso autocomplete --app step_away --country us
 /Users/rahulgoel/aso-intelligence/aso harvest step_away --country us --harvest --auto-apply
 
-# 4. Run 0-100 difficulty & competitor n-gram research:
-/Users/rahulgoel/aso-intelligence/aso research "break reminder" --country us --entity macSoftware
+# 8. Score keyword difficulty (0-100) vs competitor rating depth:
+/Users/rahulgoel/aso-intelligence/aso difficulty "break reminder,neck stretch,eye break" --country us --entity macSoftware
 
-# 5. Audit or apply Worldwide Purchasing Power Parity (GNI 3-Band Parity):
-/Users/rahulgoel/aso-intelligence/aso ppp step_away --model gni_bands --base-price 2.99 --dry-run
-
-# 6. Audit or push localized metadata directly to Apple App Store Connect API:
+# 9. Audit or push localized metadata directly to Apple ASC API:
 /Users/rahulgoel/aso-intelligence/aso audit step_away
 /Users/rahulgoel/aso-intelligence/aso push step_away --dry-run
 /Users/rahulgoel/aso-intelligence/aso push step_away
 
-# 7. Launch the local web dashboard:
+# 10. Launch browser visualizer dashboard:
 /Users/rahulgoel/aso-intelligence/aso dash
 ```
+
+---
+
+## 💵 Strict Real Sales Data Mandate & Lifetime Baseline
+- **Never assume or extrapolate revenue**: Always use real `developer_proceeds` and `customer_price` synced directly from Apple's `/v1/salesReports` API.
+- **Official App Store Connect Lifetime Performance (UTC)**:
+  - **Total Mac Units**: **194 units** (100% real organic Mac App Store downloads & sales)
+  - **Gross Customer Sales**: **$44.99 USD**
+  - **Net Developer Proceeds**: **$33.10 USD** (Apple deposits)
 
 ---
 
@@ -93,7 +128,7 @@ All intelligence across Step Away and the portfolio is stored in SQLite at `~/.v
 | Table Name | Description | Step Away Focus |
 |---|---|---|
 | `app_portfolio_snapshots` | Master app records & ratings | App ID `6754695723`, live version `1.7.0`, macOS Health & Fitness |
-| `app_sales_reports` | Daily sales, downloads & IAPs | 68 Mac downloads, $46.92 proceeds in last 14 days |
+| `app_sales_reports` | Daily sales, downloads & proceeds | 194 units, $44.99 gross sales, $33.10 net proceeds |
 | `app_store_impressions` | Daily impressions history | 6,217 impressions across 160 days (avg 38.9/day, peak 689) |
 | `app_worldwide_ratings` | Ratings across 25 storefronts | 7 in-depth written reviews in ASC (100% 5.0 ★) |
 | `autocomplete_suggestions` | Apple Search typed hints | 3,310 suggestions (`break reminder`, `neck stretch`, `eye strain`) |
@@ -108,9 +143,40 @@ All intelligence across Step Away and the portfolio is stored in SQLite at `~/.v
 # Check live search rankings
 sqlite3 ~/.vibe-aso/aso_intelligence.db "SELECT country, keyword, rank, total_in_results FROM rank_snapshots WHERE app_id = '6754695723' AND recorded_at = (SELECT max(recorded_at) FROM rank_snapshots WHERE app_id = '6754695723') ORDER BY rank ASC;"
 
-# View daily sales and downloads
-sqlite3 ~/.vibe-aso/aso_intelligence.db "SELECT report_date, product_type_id, sum(units), sum(developer_proceeds), country FROM app_sales_reports WHERE app_id = '6754695723' OR sku LIKE '%smartbreak%' GROUP BY report_date, product_type_id, country ORDER BY report_date DESC LIMIT 20;"
-
-# View daily impressions history
-sqlite3 ~/.vibe-aso/aso_intelligence.db "SELECT date, impressions FROM app_store_impressions WHERE app_id = '6754695723' ORDER BY date DESC LIMIT 30;"
+# View real sales and proceeds
+sqlite3 ~/.vibe-aso/aso_intelligence.db "SELECT report_date, product_type_id, sum(units), round(sum(developer_proceeds), 2), proceeds_currency, country FROM app_sales_reports WHERE app_id = '6754695723' OR sku LIKE '%smartbreak%' GROUP BY report_date, product_type_id, country ORDER BY report_date DESC LIMIT 20;"
 ```
+
+---
+
+## ⭐ Proven High-Converting App Store Review & Rating Architecture
+
+1. **Immediate Post-Purchase Delight (#1 5★ Driver)**:
+   - Always trigger `SKStoreReviewController.requestReview()` **1.5s after successful IAP / Subscription purchase**.
+2. **First-Session Drop-off Prevention (Early Delight Trigger)**:
+   - Trigger on the **2nd completed core action / victory** (e.g. 2nd puzzle completed, 2nd stretch completed).
+3. **Category / Pack Mastery & Euphoria**:
+   - Trigger immediately upon completing a full set/category (e.g. 6/6 medals in a pack, 108th bead).
+4. **Streak / Daily Reward Milestone**:
+   - Trigger when claiming Day 3 or Day 7 streak reward.
+5. **Standard Timing & Modal Rules**:
+   - **3-Day Active Cooldown** (never 7+ days which misses active user momentum).
+   - **1.5s Animation Delay & Modal Decoupling**: Always delay `SKStoreReviewController` by 1.5 seconds after paywall or modal dismissal so celebratory animations complete and the active `UIWindowScene` has fully settled before the dialog appears. Never trigger while modal transitions are in-flight to prevent UI hanging on "Submit".
+   - **Zero Negative Moments**: NEVER prompt on launch, on error, on cancel, or during active flow.
+   - **No Permission Stacking**: Never ask for Push Notifications and App Review in the same session.
+
+---
+
+## ⚡ Apple Design Award Level: 120Hz ProMotion Tactile Haptics & Non-Blocking Performance Architecture
+
+1. **`CACurrentMediaTime()` High-Performance Micro-Debouncing (30ms Threshold)**:
+   - Rapid tab clicking, aggressive button tapping, or continuous slider dragging must never flood the Taptic Engine IPC queue.
+   - Any haptic signals firing within $<30\text{ms}$ must be dropped before reaching UIKit IPC, keeping the main runloop completely unburdened for 120 FPS animations.
+2. **Non-Blocking Thread Safety (`performOnMain`)**:
+   - Menu bar, audio, timer callbacks, and background event loops must check `Thread.isMainThread` directly—executing immediately if on main, or dispatching asynchronously via `DispatchQueue.main.async` to avoid thread hopping and blocking background processing.
+3. **Elimination of Hot-Path `.prepare()` Latency**:
+   - Feedback generators must be pre-warmed once at app launch (`prepareAll()`). Redundant synchronous `.prepare()` calls during active touches, drag gestures, and tab transitions must be avoided to prevent motor spin-up hitches.
+4. **Silky Tab Switching & Responsive Navigation**:
+   - Tab transitions (`TabView` / `onChange(of: selectedTab)`) and navigation links must invoke debounced haptics (`selectionChanged()`), allowing SwiftUI navigation containers to switch views instantly with zero frame stutter.
+5. **Decoupled Modal Dismissal & Zero-Hang Review Submission**:
+   - Never trigger `SKStoreReviewController.requestReview` during an active modal presentation or dismiss animation. Always allow the presenting sheet to fully settle ($1.5\text{s}$ buffer) before requesting review so `StoreKitUIService` maintains the active responder chain and the "Submit" button never hangs.
