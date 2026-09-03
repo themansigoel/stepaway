@@ -14,7 +14,7 @@ This document defines the operational rules, architecture standards, and ASO int
 - **Pricing:** Free to download ($0.00) with 3-Day Pro Trial
 - **Core Features:** Meeting-aware menu bar break timer, Spine Align & Blink Guide HUDs, 20-20-20 eye strain timer, GitHub-style activity heatmaps, and Strict Focus Mode.
 - **StoreKit 2 IAP Products:**
-  - `com.smartbreak.stepaway.pro.annual` (Annual Pro - $9.99/yr with 3-Day Free Trial)
+  - `com.smartbreak.stepaway.pro.annual` (Annual Pro - $9.99/yr)
   - `com.smartbreak.stepaway.pro.monthly` (Monthly Pro - $1.99/mo)
   - `com.smartbreak.stepaway.pro.lifetime` (Lifetime Pro - $19.99)
   - Automatic grandfathering for all v1.0-v1.7.0 buyers
