@@ -114,7 +114,10 @@ All App Store Connect operations (metadata pushing, screenshot uploads, IAP sync
 ### 3. ⭐ Proven High-Converting App Store Review & Rating Architecture
 Every app in the portfolio must adhere to this standardized, high-converting rating prompt structure:
 1. **Immediate Post-Purchase Delight (#1 5★ Driver)**: Trigger `SKStoreReviewController.requestReview()` **1.5 seconds after a successful IAP unlock, subscription purchase, or Promo Code redemption**.
-2. **In-App Promo Code Redemption Mandate**: Every paywall must provide a native **"Redeem Code"** button invoking `SKPaymentQueue.default().presentCodeRedemptionSheet()` (or `AppStore.presentOfferCodeRedeemSheet(in:)`). This ensures community giveaway users redeem inside the app and receive the review prompt immediately during their delight peak.
+2. **In-App & Platform Promo Code Redemption Mandate**: Every paywall must provide a native **"Redeem Code"** button:
+   - **iOS**: Invoke `SKPaymentQueue.default().presentCodeRedemptionSheet()` (or `AppStore.presentOfferCodeRedeemSheet(in:)`).
+   - **macOS**: Open `https://apps.apple.com/redeem?ctx=apps` via `NSWorkspace.shared.open(url)`. When the redemption finishes in the Mac App Store, ensure `Transaction.updates` brings the app back to foreground (`NSApp.activate(ignoringOtherApps: true)`), shows the celebratory unlock toast, and triggers `promptReviewAfterPurchase()`.
+   - This ensures community & Reddit giveaway users redeem seamlessly and receive the 5★ review prompt immediately during their peak delight.
 3. **First-Session Early Delight Trigger**: Trigger on the **2nd completed core action / victory** (e.g. 2nd break completed, 2nd puzzle solved, 27th bead completed). Initial sessions average 2–4 minutes; delaying until 5+ actions misses 60%+ of users.
 4. **Milestone / Streak Delight**: Trigger immediately upon achieving a major milestone (e.g. 100% category mastery, sacred milestone, or Day 3/Day 7 retention streak claim).
 5. **Standard Safety Rules**:
