@@ -8,7 +8,7 @@ This document defines the operational rules, architecture standards, and ASO int
 - **App Name:** Break Reminder - Step Away
 - **App Store Track ID:** `6754695723` | **Bundle ID:** `smartbreak.sunshine.app`
 - **Platform:** macOS (14.6+ Sonoma / Sequoia) (`macSoftware`)
-- **Live Version:** `1.7.0` (Build 25) | **Release Target:** `1.8.0` (Build 30) (`PREPARE_FOR_SUBMISSION`) ✅
+- **Live Version:** `1.8.0` (Build 32) | **Release Target:** `2.0.0` (Build 33) (`PREPARE_FOR_SUBMISSION`) ✅
 - **App Store Link:** `https://apps.apple.com/app/break-reminder-step-away/id6754695723`
 - **Product Website:** `https://themansigoel.github.io/stepaway/`
 - **Pricing:** Free to download ($0.00) with 3-Day Pro Trial
