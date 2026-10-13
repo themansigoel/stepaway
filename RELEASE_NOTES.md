@@ -1,6 +1,6 @@
 # Release Notes - Step Away (Mac)
 
-## Version 2.0.0 (Build 33) - Upcoming Release (In Preparation)
+## Version 2.0.0 (Build 34) - Live on Mac App Store
 
 ### 🎙️ Intelligent Meeting & Audio Call Detection
 - **Microphone & Active Call Awareness:** Intelligently pauses breaks and reminders during Slack Huddles, Zoom calls, Microsoft Teams, and Google Meet, even when your video camera is turned off.
