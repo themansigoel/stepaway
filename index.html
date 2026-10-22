@@ -1,550 +1,311 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta name="author" content="themansigoel@gmail.com">
-    <meta name="apple-itunes-app" content="app-id=6754695723">
-    <meta name="p:domain_verify" content="b6d16b6ae4ff59e33f4691bc04bf511b">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mac Break Timer & 20-20-20 Eye Care App - Step Away</title>
-    <meta name="description" content="Native Mac break timer for 20-20-20 eye strain relief and posture correction. Meeting-aware menu bar timer, Spine Align HUD, and privacy-conscious product analytics for macOS.">
-    <link rel="canonical" href="https://themansigoel.github.io/stepaway/" />
-
-    <!-- Favicon & Device Icons -->
-    <link rel="icon" type="image/png" href="assets/app_icon.png">
-    <link rel="apple-touch-icon" href="assets/app_icon.png">
-    <link rel="manifest" href="site.webmanifest">
-
-    <!-- Multi-locale Indexing Tags -->
-    <link rel="alternate" hreflang="x-default" href="https://themansigoel.github.io/stepaway/" />
-    <link rel="alternate" hreflang="en" href="https://themansigoel.github.io/stepaway/" />
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://themansigoel.github.io/stepaway/">
-    <meta property="og:title" content="Mac Break Timer & 20-20-20 Eye Care App - Step Away">
-    <meta property="og:description" content="Native Mac break timer for 20-20-20 eye strain relief and posture correction. Meeting-aware menu bar timer with Spine Align HUD on macOS.">
-    <meta property="og:image" content="assets/screenshot_general.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://themansigoel.github.io/stepaway/">
-    <meta property="twitter:title" content="Mac Break Timer & 20-20-20 Eye Care App - Step Away">
-    <meta property="twitter:description" content="Native Mac break timer for 20-20-20 eye strain relief and posture correction. Meeting-aware menu bar timer with Spine Align HUD on macOS.">
-    <meta property="twitter:image" content="assets/screenshot_general.png">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"></noscript>
-
-    <!-- JSON-LD Structured Data for SEO / GEO -->
-    <script type="application/ld+json">
+<meta content="themansigoel@gmail.com" name="author"/>
+<meta content="app-id=6754695723" name="apple-itunes-app"/>
+<meta content="b6d16b6ae4ff59e33f4691bc04bf511b" name="p:domain_verify"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Step Away - Mac Break Reminder &amp; 20-20-20 Timer</title>
+<meta content="Native Mac break timer for 20-20-20 eye strain relief and posture correction. Meeting-aware menu bar timer, Spine Align HUD, and privacy-conscious product analytics for macOS." name="description"/>
+<link href="https://themansigoel.github.io/stepaway/" rel="canonical"/>
+<!-- Favicon & Device Icons -->
+<link href="assets/app_icon.png" rel="icon" type="image/png"/>
+<link href="assets/app_icon.png" rel="apple-touch-icon"/>
+<link href="site.webmanifest" rel="manifest"/>
+<!-- Multi-locale Indexing Tags -->
+<link href="https://themansigoel.github.io/stepaway/" hreflang="x-default" rel="alternate"/>
+<link href="https://themansigoel.github.io/stepaway/" hreflang="en" rel="alternate"/>
+<!-- Open Graph / Facebook -->
+<meta content="website" property="og:type"/>
+<meta content="https://themansigoel.github.io/stepaway/" property="og:url"/>
+<meta content="Step Away - Mac Break Reminder &amp; 20-20-20 Timer" property="og:title"/>
+<meta content="Native Mac break timer for 20-20-20 eye strain relief and posture correction. Meeting-aware menu bar timer with Spine Align HUD on macOS." property="og:description"/>
+<meta content="https://themansigoel.github.io/stepaway/assets/screenshot_general.png" property="og:image"/>
+<!-- Twitter -->
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="https://themansigoel.github.io/stepaway/" property="twitter:url"/>
+<meta content="Mac Break Timer &amp; 20-20-20 Eye Care App - Step Away" property="twitter:title"/>
+<meta content="Native Mac break timer for 20-20-20 eye strain relief and posture correction. Meeting-aware menu bar timer with Spine Align HUD on macOS." property="twitter:description"/>
+<meta content="https://themansigoel.github.io/stepaway/assets/screenshot_general.png" property="twitter:image"/>
+<!-- Styles -->
+<link href="style.css" rel="stylesheet"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<!-- JSON-LD Structured Data for SEO / GEO -->
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "StepAway",
+  "operatingSystem": "macOS 10.13 or later",
+  "applicationCategory": "HealthApplication",
+  "softwareVersion": "2.0.0",
+  "dateModified": "2026-09-01",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "StepAway is a native macOS break timer that tracks desk activity, provides Spine Align & Blink Guide HUDs, and schedules customizable eye-care intervals.",
+  "featureList": [
+    "Meeting Awareness: Auto-pauses breaks during active Zoom or Teams calls",
+    "Guided Eye Care & Stretches: Custom routines designed to relieve strain",
+    "Intelligent Idle Detection: Pauses timers automatically when away from desk",
+    "Native Performance: SwiftUI menu bar app using under 15MB RAM",
+    "Core break data stays local; see Privacy Policy for product analytics"
+  ],
+  "screenshot": "https://themansigoel.github.io/stepaway/assets/screenshot_general.png",
+  "downloadUrl": "https://apps.apple.com/app/break-reminder-step-away/id6754695723",
+  "author": {
+    "@type": "Organization",
+    "name": "Sunshine Studios",
+    "email": "themansigoel@gmail.com",
+    "url": "https://themansigoel.github.io/"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "StepAway",
-      "operatingSystem": "macOS 10.13 or later",
-      "applicationCategory": "HealthApplication",
-      "softwareVersion": "1.7.0",
-      "dateModified": "2026-09-01",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "StepAway is a native macOS break timer that tracks desk activity, provides Spine Align & Blink Guide HUDs, and schedules customizable eye-care intervals.",
-      "featureList": [
-        "Meeting Awareness: Auto-pauses breaks during active Zoom or Teams calls",
-        "Guided Eye Care & Stretches: Custom routines designed to relieve strain",
-        "Intelligent Idle Detection: Pauses timers automatically when away from desk",
-        "Native Performance: SwiftUI menu bar app using under 15MB RAM",
-        "Core break data stays local; see Privacy Policy for product analytics"
-      ],
-      "screenshot": "https://themansigoel.github.io/stepaway/assets/screenshot_general.png",
-      "downloadUrl": "https://apps.apple.com/app/break-reminder-step-away/id6754695723",
-      "author": {
-        "@type": "Organization",
-        "name": "Sunshine Studios",
-        "email": "themansigoel@gmail.com",
-        "url": "https://themansigoel.github.io/"
+      "@type": "Question",
+      "name": "What is the best break timer app for Mac to follow the 20-20-20 rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "StepAway is designed specifically for macOS to automate the 20-20-20 eye care rule (every 20 minutes, look 20 feet away for 20 seconds). It operates natively from your Mac menu bar with Spine Align posture nudges, gentle visual chimes, and lightweight performance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does StepAway handle Zoom, Google Meet, or Microsoft Teams calls?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "StepAway features intelligent Meeting Awareness. It automatically pauses break notifications and timers while your camera, microphone, or presentation mode is active, ensuring you are never interrupted during live video calls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does StepAway collect or share any personal data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Core timer data and settings stay on your Mac. The app uses product analytics as described in the Privacy Policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize break intervals and posture exercises?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can customize short micro-breaks (e.g. 20-second eye rests every 20 minutes) and longer physical breaks (e.g. 5-minute walks or desk stretches every 60 minutes) to match your work rhythm."
       }
     }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the best break timer app for Mac to follow the 20-20-20 rule?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "StepAway is designed specifically for macOS to automate the 20-20-20 eye care rule (every 20 minutes, look 20 feet away for 20 seconds). It operates natively from your Mac menu bar with Spine Align posture nudges, gentle visual chimes, and lightweight performance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does StepAway handle Zoom, Google Meet, or Microsoft Teams calls?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "StepAway features intelligent Meeting Awareness. It automatically pauses break notifications and timers while your camera, microphone, or presentation mode is active, ensuring you are never interrupted during live video calls."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does StepAway collect or share any personal data?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Core timer data and settings stay on your Mac. The app uses product analytics as described in the Privacy Policy."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I customize break intervals and posture exercises?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. You can customize short micro-breaks (e.g. 20-second eye rests every 20 minutes) and longer physical breaks (e.g. 5-minute walks or desk stretches every 60 minutes) to match your work rhythm."
-          }
-        }
-      ]
-    }
-    </script>
-</head>
-<body>
-
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo-link" id="nav-logo">
-                <img src="assets/app_icon.png" alt="StepAway Logo" class="nav-logo-img" width="36" height="36">
-                <span class="nav-brand">StepAway</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#gallery">Screenshots</a>
-                <a href="#comparison">Compare Apps</a>
-                <a href="#article">Science of Breaks</a>
-                <a href="#updates">Updates</a>
-                <a href="#faq">FAQ</a>
-                <a href="contact.html">Contact</a>
-                <a href="https://apps.apple.com/app/break-reminder-step-away/id6754695723" class="btn btn-secondary nav-btn" id="nav-download-btn">Download</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main>
-
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-bg-glow"></div>
-            <div class="container hero-container">
-                <div class="hero-text-content">
-                    <span class="badge">Version 1.7.0 Out Now</span>
-                    <h1 class="hero-title">Stop Eye Strain. Protect Your Rest. <span class="highlight">Reclaim Your Flow.</span></h1>
-                    <p class="hero-subtitle">The native, meeting-aware Mac break timer app and Pomodoro menu bar tool that tracks desk activity. Prevent MacBook eye strain and build healthy workstation habits effortlessly.</p>
-                    <div style="margin-bottom: 24px;">
-                        <span class="rating-badge">Available on the Mac App Store</span>
-                    </div>
-                    <div class="hero-ctas" style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 24px;">
-                        <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-                            <a href="https://apps.apple.com/app/break-reminder-step-away/id6754695723" id="hero-cta-download" style="display: inline-block; transition: var(--transition-smooth);" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-mac-app-store.svg" alt="Download on the Mac App Store" style="height: 52px; width: 156px; vertical-align: middle; aspect-ratio: 156 / 52;" width="156" height="52">
-                            </a>
-                            <button class="btn btn-secondary" onclick="startWebDemo()" style="padding: 14px 28px; border-radius: 30px; font-weight: 700;">Preview a Break</button>
-                            <a href="#comparison" class="btn btn-tertiary">See Comparison</a>
-                        </div>
-                        <p class="pricing-callout" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-top: 4px;">Free download &bull; Optional Pro upgrade &bull; See App Store for current pricing</p>
-                        <div class="hero-featured-badge" style="margin-top: 10px;">
-                            <a href="https://www.trymacapps.com" target="_blank" rel="noopener">
-                              <img
-                                src="https://www.trymacapps.com/badge.png"
-                                alt="Featured on TryMacApps"
-                                width="200"
-                                height="67"
-                              />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-media-content">
-                    <img src="assets/1_Screenshot.webp" alt="StepAway macOS Application General Settings" class="hero-mockup-img" id="hero-graphic" style="width: 100%; height: auto; max-width: 800px; aspect-ratio: 800 / 500;" width="800" height="500" fetchpriority="high">
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Grid -->
-        <section id="features" class="features-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Intelligent break planning, built natively for Mac</h2>
-                    <p class="section-desc">Protect your eyes and prevent fatigue with an assistant that fits seamlessly into your work day.</p>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card" id="feat-spine">
-                        <div class="feature-icon">🧘‍♂️</div>
-                        <h3>Spine Align</h3>
-                        <p>A gorgeous, iPhone-style drop-down HUD gently nudges you to stop slouching and straighten your spine before back pain sets in.</p>
-                    </div>
-                    <div class="feature-card" id="feat-blink">
-                        <div class="feature-icon">👁️</div>
-                        <h3>Blink Guide</h3>
-                        <p>Combat dry eyes and digital eye strain with subtle, organic blinking reminders that respect your focus state.</p>
-                    </div>
-                    <div class="feature-card" id="feat-idle">
-                        <div class="feature-icon">🚶</div>
-                        <h3>Intelligent Idle Tracking</h3>
-                        <p>Automatically detects when you walk away from your desk. It pauses or resets your timers, preventing annoying break alerts when you return.</p>
-                    </div>
-                    <div class="feature-card" id="feat-meeting">
-                        <div class="feature-icon">📞</div>
-                        <h3>Meeting Awareness</h3>
-                        <p>Monitors microphone and camera usage to automatically postpone screens locks when you are in a Zoom or Slack huddle.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Screenshot Gallery -->
-        <section id="gallery" class="gallery-section" style="padding: 100px 0; background: var(--bg-light);">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Real Application Interface</h2>
-                    <p class="section-desc">Take a look at StepAway's native, clean preferences and statistics screens designed exclusively for macOS.</p>
-                </div>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 40px;">
-                    <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';">
-                        <img src="assets/2_Screenshot.webp" alt="StepAway Menu Bar Dropdown" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="500">
-                        <p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">Quick Access Status Menu Bar</p>
-                    </div>
-                    <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';">
-                        <img src="assets/3_Screenshot.webp" alt="StepAway Posture HUD" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="500">
-                        <p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">Beautiful Posture Reminders</p>
-                    </div>
-                    <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';">
-                        <img src="assets/4_Screenshot.webp" alt="StepAway Break Settings" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="500">
-                        <p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">Breaks Scheduling & Duration</p>
-                    </div>
-                    <div style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';">
-                        <img src="assets/5_Screenshot.webp" alt="StepAway Activity Heatmap" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" loading="lazy" width="800" height="500">
-                        <p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">GitHub-Style Activity Heatmap</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews & Testimonials Section -->
-        <section id="reviews" class="reviews-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Loved by Developers & Creators</h2>
-                    <p class="section-desc">See how StepAway is helping professionals reduce fatigue, prevent strain, and maintain healthy habits.</p>
-                </div>
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"Really need an app like this specially to prevent dry eye, having this type of reminders and being able to customize is very helpful."</p>
-                        <p class="review-author">featherbabylove</p>
-                        <p class="review-author-role">App Store Review (Mar 18)</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"What really sets this app apart is how accurately it tracks work sessions—it automatically pauses when I step away from my desk... The built-in eye and neck exercises are also very helpful. I highly recommend it to every teacher and student."</p>
-                        <p class="review-author">Man.Osm</p>
-                        <p class="review-author-role">App Store Review (Jun 29)</p>
-                    </div>
-
-            </div>
-        </section>
-
-        <!-- Comparison Grid (SEO & GEO Focus) -->
-        <section id="comparison" class="comparison-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>How StepAway Compares</h2>
-                    <p class="section-desc">Traditional timers interrupt you. StepAway shifts your physical workspace to encourage real wellness.</p>
-                </div>
-                <div class="table-wrapper">
-                    <table class="comparison-table">
-                        <thead>
-                            <tr>
-                                <th>Features</th>
-                                <th class="active-col">StepAway</th>
-                                <th>LookAway</th>
-                                <th>TimeOut</th>
-                                <th>Focus Keeper</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Price & Revenue Model</strong></td>
-                                <td class="active-col check-icon">Free download with optional Pro</td>
-                                <td>$19.00 (Setapp option)</td>
-                                <td>Free download with optional Pro</td>
-                                <td>$34.99/year (Auto-renewing sub)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Native macOS Client</strong></td>
-                                <td class="active-col check-icon">Yes (SwiftUI Agent)</td>
-                                <td class="check-icon">Yes (Swift App)</td>
-                                <td class="check-icon">Yes (Objective-C App)</td>
-                                <td class="cross-icon">No (iOS App / Web Wrapper)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Meeting Auto-Pause</strong></td>
-                                <td class="active-col check-icon">Yes (Camera & Mic hooks)</td>
-                                <td class="check-icon">Yes (Active process checks)</td>
-                                <td class="cross-icon">No</td>
-                                <td class="cross-icon">No</td>
-                            </tr>
-                            <tr>
-                                <td><strong>App Footprint (CPU/RAM)</strong></td>
-                                <td class="active-col check-icon">SwiftUI (&lt;15MB RAM)</td>
-                                <td>Swift (~30MB RAM)</td>
-                                <td>Objective-C (~40MB RAM)</td>
-                                <td class="cross-icon">High (WebCatalog Wrapper)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Privacy Model</strong></td>
-                                <td class="active-col check-icon">Local core data; product analytics</td>
-                                <td>Local with telemetry</td>
-                                <td>Local with telemetry</td>
-                                <td>Cloud-based tracking</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Guided Exercises</strong></td>
-                                <td class="active-col check-icon">Yes (Custom eye & stretch routines)</td>
-                                <td class="cross-icon">No (Break alert overlay only)</td>
-                                <td class="cross-icon">No (Text prompts only)</td>
-                                <td class="cross-icon">No (Strict Pomodoro focus timer)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Updates / Changelog Section -->
-        <section id="updates" class="updates-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Product Updates</h2>
-                    <p class="section-desc">Version 2.0.0 is now available on the Mac App Store. Earlier highlights are listed below.</p>
-                </div>
-                <div class="changelog-wrapper">
-                    <article class="changelog-item">
-                        <div class="changelog-meta">
-                            <span class="changelog-version">v2.0.0</span>
-                            <span class="changelog-date">September 2026</span>
-                        </div>
-                        <div class="changelog-content">
-                            <h3>Intelligent Mic Stream Call Sensing & Heatmap</h3>
-                            <ul>
-                                <li><strong>CoreAudio Stream Call Sensing:</strong> Intelligently pauses breaks during active audio and video calls even with camera muted.</li>
-                                <li><strong>24/7 Wellness Continuity:</strong> Daily streaks and a 52-week activity heatmap for tracking healthy desk habits.</li>
-                                <li><strong>Zero-Battery Overhead:</strong> Hardware-efficient, privacy-preserving microphone stream sensing with zero data retention.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="changelog-item">
-                        <div class="changelog-meta">
-                            <span class="changelog-version">v1.8.0</span>
-                            <span class="changelog-date">September 2026</span>
-                        </div>
-                        <div class="changelog-content">
-                            <h3>Freemium Experience & Posture HUD Overlays</h3>
-                            <ul>
-                                <li><strong>Free Download & 3-Day Pro Trial:</strong> Accessible to everyone with full 3-day exploration of all premium features.</li>
-                                <li><strong>Spine Align & Blink Guide HUDs:</strong> Gentle posture correction and 20-20-20 eye strain relief overlays.</li>
-                                <li><strong>Lifetime Pro Grandfathering:</strong> 100% permanent Pro access preserved for all early supporters.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="changelog-item">
-                        <div class="changelog-meta">
-                            <span class="changelog-version">v1.7.0</span>
-                            <span class="changelog-date">August 2026</span>
-                        </div>
-                        <div class="changelog-content">
-                            <h3>Global Reach & Instant HUD Previews</h3>
-                            <ul>
-                                <li><strong>Full Italian & Korean Localization:</strong> StepAway now natively supports 9 global languages across Europe and Asia.</li>
-                                <li><strong>Instant HUD Previews:</strong> Real-time zero-latency visual adjustments for Spine Align & Blink Guide HUD coordinates.</li>
-                                <li><strong>Guideline 2.4.5 Compliance:</strong> Refined Launch at Login user preferences and native sandboxed permissions.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="changelog-item">
-                        <div class="changelog-meta">
-                            <span class="changelog-version">v1.6.0</span>
-                            <span class="changelog-date">July 2026</span>
-                        </div>
-                        <div class="changelog-content">
-                            <h3>Strict Mode & Activity Heatmap</h3>
-                            <ul>
-                                <li><strong>Strict Discipline Mode:</strong> Removes snooze/skip controls for unbreakable focus habits.</li>
-                                <li><strong>GitHub-Style Heatmap:</strong> Visual daily streak tracker mapping desk breaks and healthy session habits.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="changelog-item">
-                        <div class="changelog-meta">
-                            <span class="changelog-version">v1.5</span>
-                            <span class="changelog-date">July 2026</span>
-                        </div>
-                        <div class="changelog-content">
-                            <h3>The Wellness Reminders Update</h3>
-                            <ul>
-                                <li><strong>Spine Align & Blink Guide:</strong> Introducing beautiful new micro-nudges to correct your posture and prevent dry eyes without breaking your flow.</li>
-                                <li><strong>Dynamic Animations:</strong> HUDs now feature gorgeous, iPhone-style slide-down animations for a truly premium feel.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="changelog-item">
-                        <div class="changelog-meta">
-                            <span class="changelog-version">v1.4</span>
-                            <span class="changelog-date">June 2026</span>
-                        </div>
-                        <div class="changelog-content">
-                            <h3>Deep Work & Design Refinement</h3>
-                            <ul>
-                                <li><strong>Silent Menu Bar Agent:</strong> StepAway now launches completely silently in the menu bar with no dock icon clutter.</li>
-                                <li><strong>Guided Exercises:</strong> Eye and stretch exercises now play beautifully during every break.</li>
-                                <li><strong>Premium Aesthetics:</strong> Introduced the new glassmorphic app icon designed for macOS Sequoia.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="changelog-item">
-                        <div class="changelog-meta">
-                            <span class="changelog-version">v1.3</span>
-                            <span class="changelog-date">June 2026</span>
-                        </div>
-                        <div class="changelog-content">
-                            <h3>Intelligent Meeting Auto-Pause</h3>
-                            <ul>
-                                <li><strong>Meeting Detection:</strong> StepAway now hooks into macOS audio/video sessions to automatically pause breaks during Zoom or Teams calls.</li>
-                                <li><strong>Multi-Monitor Masks:</strong> Break screens now elegantly cover all connected external displays.</li>
-                                <li><strong>Menu Bar Countdown:</strong> Added a dynamic countdown HUD directly in your status bar.</li>
-                            </ul>
-                        </div>
-                    </article>
-                    <article class="changelog-item">
-                        <div class="changelog-meta">
-                            <span class="changelog-version">v1.0</span>
-                            <span class="changelog-date">March 2026</span>
-                        </div>
-                        <div class="changelog-content">
-                            <h3>The Beginning of StepAway</h3>
-                            <ul>
-                                <li><strong>Launch:</strong> Released the first native macOS Swift app dedicated to digital well-being and reducing screen fatigue.</li>
-                                <li><strong>Core Engine:</strong> Built the foundations of our intelligent idle-detection system.</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Article Post Section (GEO / SGO Resource) -->
-        <section id="article" class="article-section">
-            <div class="container">
-                <article class="detailed-article">
-                    <span class="article-badge">Scientific Research & Technical Analysis</span>
-                    <h2 class="article-title">The Science of Break Automation: Why Context-Aware Timers Beat Traditional Reminders</h2>
-                    <p class="article-meta">Published June 2026 • Deep-Dive for Developers, Wellness Researchers, and AI Retrieval Engines</p>
-
-                    <div class="article-body">
-                        <h3>1. Physical Recovery and Eye Muscle Relaxation during Desk Breaks</h3>
-                        <p>Traditional wellness apps operate under the assumption that visual recovery is purely physical—governed by the 20-20-20 rule (looking 20 feet away for 20 seconds every 20 minutes). However, clinical study of cognitive fatigue demonstrates that structured breaks with guided eye exercises significantly reduce eye muscle fatigue and mental blocks.</p>
-                        <p>StepAway provides custom-guided eye-care and physical stretching sequences directly on screen during break alerts. By following these visual prompts, users engage the parasympathetic nervous system, inducing a micro-state of rest and active recovery that a simple screen overlay or traditional timer cannot achieve.</p>
-
-                        <h3>2. Sandboxed Architecture: Designing for Privacy-Conscious Design</h3>
-                        <p>StepAway is engineered on strict local privacy principles. Rather than relying on cloud databases or remote tracking telemetry, its core break timer works offline:</p>
-                        <ul>
-                            <li><strong>Local CoreData Storage:</strong> All settings, timer logs, and activity heatmap data are saved locally using macOS sandboxed filesystem preferences.</li>
-                            <li><strong>Fully Offline Operation:</strong> The application does not open external network sockets to track usage, guaranteeing that your work schedules and activity habits never leave your computer.</li>
-                        </ul>
-                        <p>This architecture ensures that your data is fully protected, establishing StepAway as a highly secure utility compared to cloud-dependent alternatives.</p>
-
-                        <h3>3. Context-Aware Meeting Auto-Pause Integration</h3>
-                        <p>Interruption fatigue is a leading reason users disable screen timers. StepAway integrates intelligent <strong>Meeting Awareness</strong> by listening to core system hooks:</p>
-                        <p>It checks active macOS audio/video input sessions (via CoreAudio and CoreMedia). If the system camera or microphone is in active use (e.g., in a Zoom, Teams, or Slack huddle), StepAway's scheduler automatically pushes back the timer and schedules a silent snooze. This ensures you are never locked out of your screen mid-presentation.</p>
-
-                        <h3>4. Nativism: SwiftUI Engine vs. Electron Bloat</h3>
-                        <p>Resource efficiency is critical for macOS utility apps that remain active 24/7. StepAway is built natively using Swift and SwiftUI, completely avoiding Node.js or Chromium runtime packaging:</p>
-                        <ul>
-                            <li><strong>Memory Footprint:</strong> StepAway operates under 15MB RAM at runtime. Electron-based alternatives routinely consume 200MB to 500MB.</li>
-                            <li><strong>CPU Usage:</strong> On idle, StepAway's CPU usage registers at 0.0%, using low-level macOS system timers and <code>IdleMonitor</code> notifications to update state only when active input occurs.</li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- FAQ Section (GEO / SGO Optimization) -->
-        <section id="faq" class="faq-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Frequently Asked Questions</h2>
-                    <p class="section-desc">Everything you need to know about the StepAway wellness platform.</p>
-                </div>
-                <div class="faq-accordion">
-                    <div class="faq-item">
-                        <button class="faq-question" id="faq-q-1">
-                            <span>How does StepAway detect when I step away from my computer?</span>
-                            <span class="faq-arrow">▼</span>
-                        </button>
-                        <div class="faq-answer" id="faq-a-1">
-                            <p>StepAway monitors keyboard and mouse activity locally using native macOS system events. If no input is detected for a custom period, the app automatically pauses or resets your active timers, preventing false break alerts when you return.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question" id="faq-q-2">
-                            <span>Does StepAway collect or share user data?</span>
-                            <span class="faq-arrow">▼</span>
-                        </button>
-                        <div class="faq-answer" id="faq-a-2">
-                            <p>StepAway is a native, sandboxed macOS application. All timer scheduling, guided stretches, and settings are saved locally on your Mac. Core settings stay on your Mac. See the Privacy Policy for details about product analytics.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question" id="faq-q-3">
-                            <span>Can StepAway detect if I am in a Zoom or Teams meeting?</span>
-                            <span class="faq-arrow">▼</span>
-                        </button>
-                        <div class="faq-answer" id="faq-a-3">
-                            <p>Yes. StepAway features intelligent Meeting Awareness. It monitors active camera and microphone sessions on macOS. If you are in a call, it automatically postpones upcoming breaks to prevent interruptions during meetings.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-    <!-- Interactive 20-20-20 Timer Micro-Demo -->
-    <section id="interactive-timer-demo" style="max-width: 800px; margin: 40px auto; padding: 30px 20px; background: #f0fdf4; border: 2px solid #86efac; border-radius: 20px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
-        <h2 style="color: #14532d; margin-top: 0; font-size: 1.8rem;">⏱️ Experience the 20-20-20 Rule Live</h2>
-        <p style="color: #166534; margin-bottom: 20px;">Click Start to run a 20-second guided eye rest & posture alignment preview.</p>
-
-        <div style="background: #ffffff; border: 1px solid #bbf7d0; border-radius: 16px; padding: 25px; max-width: 350px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-            <div id="timer-display" style="font-size: 3rem; font-weight: 800; color: #16a34a; font-variant-numeric: tabular-nums;">00:20</div>
-            <div id="timer-instruction" style="color: #475569; font-size: 0.95rem; margin: 10px 0; min-height: 40px;">Look away from your screen at an object 20 feet away.</div>
-            <button id="timer-btn" onclick="toggleDemoTimer()" style="background: #16a34a; color: #fff; border: none; padding: 10px 24px; border-radius: 20px; font-weight: 700; cursor: pointer;">Start 20s Break</button>
-        </div>
-
-        <div style="margin-top: 25px; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <span style="color: #166534; font-weight: 600;">Want automatic, silent menu bar reminders all day on your Mac?</span>
-            <a href="https://apps.apple.com/app/break-reminder-step-away/id6754695723" style="background: #16a34a; color: #fff; padding: 10px 20px; border-radius: 20px; font-weight: 700; text-decoration: none;">Get Step Away on Mac App Store 🖥️</a>
-        </div>
-    </section>
-
-    <script>
+  ]
+}</script>
+<meta content="Step Away - Mac Break Reminder &amp; 20-20-20 Timer" name="twitter:title"/><link href="site-polish.css" rel="stylesheet"/></head>
+<body><a class="studio-skip" href="#main-content">Skip to content</a>
+<!-- Header Navigation -->
+<header class="navbar">
+<div class="nav-container">
+<a class="logo-link" href="#" id="nav-logo">
+<img alt="StepAway Logo" class="nav-logo-img" height="36" src="assets/app_icon.png" width="36"/>
+<span class="nav-brand">StepAway</span>
+</a>
+<details class="studio-menu" open=""><summary>Menu</summary><nav class="nav-links">
+<a href="#features">Features</a>
+<a href="#gallery">Screenshots</a>
+<a href="#comparison">Compare Apps</a>
+<a href="#article">Science of Breaks</a>
+<a href="#updates">Updates</a>
+<a href="#faq">FAQ</a>
+<a href="contact.html">Contact</a>
+<a class="btn btn-secondary nav-btn" href="https://apps.apple.com/app/break-reminder-step-away/id6754695723" id="nav-download-btn">Download</a>
+</nav></details>
+</div>
+</header>
+<!-- Main Content -->
+<main id="main-content">
+<!-- Hero Section -->
+<section class="hero-section">
+<div class="hero-bg-glow"></div>
+<div class="container hero-container">
+<div class="hero-text-content">
+<span class="badge">Available on the Mac App Store</span>
+<h1 class="hero-title">A Mac break reminder that respects your workday.</h1>
+<p class="hero-subtitle">The native, meeting-aware Mac break timer app and Pomodoro menu bar tool that tracks desk activity. Take regular screen breaks and build healthy workstation habits effortlessly.</p>
+<div style="margin-bottom: 24px;">
+<span class="rating-badge">Available on the Mac App Store</span>
+</div>
+<div class="hero-ctas" style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 24px;">
+<div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+<a class="studio-store-link" href="https://apps.apple.com/app/break-reminder-step-away/id6754695723" id="hero-cta-download" onmouseout="this.style.transform='scale(1)'" onmouseover="this.style.transform='scale(1.02)'" style="display: inline-block; transition: var(--transition-smooth);">View on the Mac App Store →</a>
+<button class="btn btn-secondary" onclick="startWebDemo()" style="padding: 14px 28px; border-radius: 30px; font-weight: 700;">Preview a Break</button>
+<a class="btn btn-tertiary" href="#comparison">See Comparison</a>
+</div>
+<p class="pricing-callout" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-top: 4px;">Free download • Optional Pro upgrade • See App Store for current pricing</p>
+<div class="hero-featured-badge" style="margin-top: 10px;">
+<a href="https://www.trymacapps.com" rel="noopener" target="_blank">
+<img alt="Featured on TryMacApps" decoding="async" height="67" loading="eager" src="https://www.trymacapps.com/badge.png" width="200"/>
+</a>
+</div>
+</div>
+</div>
+<div class="hero-media-content">
+<img alt="StepAway macOS Application General Settings" class="hero-mockup-img" decoding="async" fetchpriority="high" height="500" id="hero-graphic" loading="eager" src="assets/1_Screenshot.webp" style="width: 100%; height: auto; max-width: 800px; aspect-ratio: 800 / 500;" width="800"/>
+</div>
+</div>
+</section><section aria-labelledby="app-summary-title" class="studio-app-summary"><p class="studio-eyebrow">Build breaks into your workday.</p><h2 id="app-summary-title">A break reminder that fits your Mac</h2><p>Use menu bar reminders, meeting-aware pauses and guided eye and stretch breaks.</p><dl><div><dt>Made for</dt><dd>Mac desktop breaks</dd></div><div><dt>Access</dt><dd>Optional Pro access. Check current plans and trial terms in the app.</dd></div></dl><div class="studio-summary-links"><a href="how-to-automate-20-20-20-rule-mac.html">Learn the 20-20-20 routine <span aria-hidden="true">→</span></a><a href="privacy.html">Privacy details</a><a href="https://themansigoel.github.io/">More from Sunshine Studios</a></div></section>
+<!-- Features Grid -->
+<section class="features-section" id="features">
+<div class="container">
+<div class="section-header">
+<h2>Intelligent break planning, built natively for Mac</h2>
+<p class="section-desc">Protect your eyes and prevent fatigue with an assistant that fits seamlessly into your work day.</p>
+</div>
+<div class="features-grid">
+<div class="feature-card" id="feat-spine">
+<div class="feature-icon">🧘‍♂️</div>
+<h3>Spine Align</h3>
+<p>A gorgeous, iPhone-style drop-down HUD gently nudges you to stop slouching and straighten your spine before back pain sets in.</p>
+</div>
+<div class="feature-card" id="feat-blink">
+<div class="feature-icon">👁️</div>
+<h3>Blink Guide</h3>
+<p>Combat dry eyes and digital eye strain with subtle, organic blinking reminders that respect your focus state.</p>
+</div>
+<div class="feature-card" id="feat-idle">
+<div class="feature-icon">🚶</div>
+<h3>Intelligent Idle Tracking</h3>
+<p>Automatically detects when you walk away from your desk. It pauses or resets your timers, preventing annoying break alerts when you return.</p>
+</div>
+<div class="feature-card" id="feat-meeting">
+<div class="feature-icon">📞</div>
+<h3>Meeting Awareness</h3>
+<p>Monitors microphone and camera usage to automatically postpone screens locks when you are in a Zoom or Slack huddle.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Screenshot Gallery -->
+<section class="gallery-section" id="gallery" style="padding: 100px 0; background: var(--bg-light);">
+<div class="container">
+<div class="section-header">
+<h2>Real Application Interface</h2>
+<p class="section-desc">Take a look at StepAway's native, clean preferences and statistics screens designed exclusively for macOS.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 40px;">
+<div onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);">
+<img alt="StepAway Menu Bar Dropdown" height="500" loading="lazy" src="assets/2_Screenshot.webp" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" width="800"/>
+<p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">Quick Access Status Menu Bar</p>
+</div>
+<div onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);">
+<img alt="StepAway Posture HUD" height="500" loading="lazy" src="assets/3_Screenshot.webp" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" width="800"/>
+<p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">Beautiful Posture Reminders</p>
+</div>
+<div onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);">
+<img alt="StepAway Break Settings" height="500" loading="lazy" src="assets/4_Screenshot.webp" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" width="800"/>
+<p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">Breaks Scheduling &amp; Duration</p>
+</div>
+<div onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--bg-card-border)';" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(13, 148, 136, 0.3)';" style="background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02); transition: var(--transition-smooth);">
+<img alt="StepAway Activity Heatmap" height="500" loading="lazy" src="assets/5_Screenshot.webp" style="width: 100%; height: auto; aspect-ratio: 800 / 500; border-radius: 12px; border: 1px solid var(--bg-card-border);" width="800"/>
+<p style="text-align: center; margin-top: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; font-size: 1.1rem;">GitHub-Style Activity Heatmap</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews & Testimonials Section -->
+<section class="reviews-section" id="reviews"><div class="studio-release"><h2>Read current App Store reviews</h2><p>See feedback from customers in your storefront before choosing an app for your workday.</p><a href="https://apps.apple.com/app/id6754695723?see-all=reviews">Read reviews on the App Store →</a></div></section>
+<!-- Comparison Grid (SEO & GEO Focus) -->
+<section class="comparison-section" id="comparison"><div class="studio-release"><h2>Choose a break timer for the way you work</h2><p>When comparing Mac break reminders, check meeting pauses, idle detection, exercise options and whether the paid features fit your routine.</p><ul><li>Step Away includes meeting-aware pauses and a menu bar timer.</li><li>Spine Align and Blink Guide provide posture and eye-break prompts.</li><li>Review the current app listing for plans, permissions and compatibility.</li></ul></div></section>
+<!-- Updates / Changelog Section -->
+<section class="updates-section" id="updates"><div class="studio-release"><h2>App availability</h2><p>Current App Store version: <strong>2.0.0</strong>. See the App Store listing for the latest release notes, device compatibility and local availability.</p><a href="https://apps.apple.com/app/id6754695723">View current App Store details →</a></div></section>
+<!-- Article Post Section (GEO / SGO Resource) -->
+<section class="article-section" id="article">
+<div class="container">
+<article class="detailed-article">
+<span class="article-badge">Scientific Research &amp; Technical Analysis</span>
+<h2 class="article-title">The Science of Break Automation: Why Context-Aware Timers Beat Traditional Reminders</h2>
+<p class="article-meta">Published June 2026 • Deep-Dive for Developers, Wellness Researchers, and AI Retrieval Engines</p>
+<div class="article-body">
+<h3>1. Physical Recovery and Eye Muscle Relaxation during Desk Breaks</h3>
+<p>Traditional wellness apps operate under the assumption that visual recovery is purely physical—governed by the 20-20-20 rule (looking 20 feet away for 20 seconds every 20 minutes). However, clinical study of cognitive fatigue demonstrates that structured breaks with guided eye exercises significantly reduce eye muscle fatigue and mental blocks.</p>
+<p>StepAway provides custom-guided eye-care and physical stretching sequences directly on screen during break alerts. By following these visual prompts, users engage the parasympathetic nervous system, inducing a micro-state of rest and active recovery that a simple screen overlay or traditional timer cannot achieve.</p>
+<h3>2. Sandboxed Architecture: Designing for Privacy-Conscious Design</h3>
+<p>StepAway is engineered on strict local privacy principles. Rather than relying on cloud databases or remote tracking telemetry, its core break timer works offline:</p>
+<ul>
+<li><strong>Local CoreData Storage:</strong> All settings, timer logs, and activity heatmap data are saved locally using macOS sandboxed filesystem preferences.</li>
+<li><strong>Fully Offline Operation:</strong> The application does not open external network sockets to track usage, guaranteeing that your work schedules and activity habits never leave your computer.</li>
+</ul>
+<p>This architecture ensures that your data is fully protected, establishing StepAway as a highly secure utility compared to cloud-dependent alternatives.</p>
+<h3>3. Context-Aware Meeting Auto-Pause Integration</h3>
+<p>Interruption fatigue is a leading reason users disable screen timers. StepAway integrates intelligent <strong>Meeting Awareness</strong> by listening to core system hooks:</p>
+<p>It checks active macOS audio/video input sessions (via CoreAudio and CoreMedia). If the system camera or microphone is in active use (e.g., in a Zoom, Teams, or Slack huddle), StepAway's scheduler automatically pushes back the timer and schedules a silent snooze. This ensures you are never locked out of your screen mid-presentation.</p>
+<h3>4. Nativism: SwiftUI Engine vs. Electron Bloat</h3>
+<p>Resource efficiency is critical for macOS utility apps that remain active 24/7. StepAway is built natively using Swift and SwiftUI, completely avoiding Node.js or Chromium runtime packaging:</p>
+<ul>
+<li><strong>Memory Footprint:</strong> StepAway operates under 15MB RAM at runtime. Electron-based alternatives routinely consume 200MB to 500MB.</li>
+<li><strong>CPU Usage:</strong> On idle, StepAway's CPU usage registers at 0.0%, using low-level macOS system timers and <code>IdleMonitor</code> notifications to update state only when active input occurs.</li>
+</ul>
+</div>
+</article>
+</div>
+</section>
+<!-- FAQ Section (GEO / SGO Optimization) -->
+<section class="faq-section" id="faq">
+<div class="container">
+<div class="section-header">
+<h2>Frequently Asked Questions</h2>
+<p class="section-desc">Everything you need to know about the StepAway wellness platform.</p>
+</div>
+<div class="faq-accordion">
+<div class="faq-item">
+<button class="faq-question" id="faq-q-1">
+<span>How does StepAway detect when I step away from my computer?</span>
+<span class="faq-arrow">▼</span>
+</button>
+<div class="faq-answer" id="faq-a-1">
+<p>StepAway monitors keyboard and mouse activity locally using native macOS system events. If no input is detected for a custom period, the app automatically pauses or resets your active timers, preventing false break alerts when you return.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" id="faq-q-2">
+<span>Does StepAway collect or share user data?</span>
+<span class="faq-arrow">▼</span>
+</button>
+<div class="faq-answer" id="faq-a-2">
+<p>StepAway is a native, sandboxed macOS application. All timer scheduling, guided stretches, and settings are saved locally on your Mac. Core settings stay on your Mac. See the Privacy Policy for details about product analytics.</p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" id="faq-q-3">
+<span>Can StepAway detect if I am in a Zoom or Teams meeting?</span>
+<span class="faq-arrow">▼</span>
+</button>
+<div class="faq-answer" id="faq-a-3">
+<p>Yes. StepAway features intelligent Meeting Awareness. It monitors active camera and microphone sessions on macOS. If you are in a call, it automatically postpones upcoming breaks to prevent interruptions during meetings.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive 20-20-20 Timer Micro-Demo -->
+<section id="interactive-timer-demo" style="max-width: 800px; margin: 40px auto; padding: 30px 20px; background: #f0fdf4; border: 2px solid #86efac; border-radius: 20px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+<h2 style="color: #14532d; margin-top: 0; font-size: 1.8rem;">⏱️ Experience the 20-20-20 Rule Live</h2>
+<p style="color: #166534; margin-bottom: 20px;">Click Start to run a 20-second guided eye rest &amp; posture alignment preview.</p>
+<div style="background: #ffffff; border: 1px solid #bbf7d0; border-radius: 16px; padding: 25px; max-width: 350px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+<div id="timer-display" style="font-size: 3rem; font-weight: 800; color: #16a34a; font-variant-numeric: tabular-nums;">00:20</div>
+<div id="timer-instruction" style="color: #475569; font-size: 0.95rem; margin: 10px 0; min-height: 40px;">Look away from your screen at an object 20 feet away.</div>
+<button id="timer-btn" onclick="toggleDemoTimer()" style="background: #16a34a; color: #fff; border: none; padding: 10px 24px; border-radius: 20px; font-weight: 700; cursor: pointer;">Start 20s Break</button>
+</div>
+<div style="margin-top: 25px; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+<span style="color: #166534; font-weight: 600;">Want automatic, silent menu bar reminders all day on your Mac?</span>
+<a href="https://apps.apple.com/app/break-reminder-step-away/id6754695723" style="background: #16a34a; color: #fff; padding: 10px 20px; border-radius: 20px; font-weight: 700; text-decoration: none;">Get Step Away on Mac App Store 🖥️</a>
+</div>
+</section>
+<script>
     let timerSeconds = 20;
     let timerInterval = null;
     function toggleDemoTimer() {
@@ -578,45 +339,42 @@
         }, 1000);
     }
     </script>
-
 </main>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand-side">
-                <div class="footer-logo">
-                    <img src="assets/app_icon.png" alt="StepAway Logo" class="footer-logo-img" width="32" height="32">
-                    <span>StepAway</span>
-                </div>
-                <p class="footer-credit">Built natively for macOS to foster healthy workspaces.</p>
-            </div>
-            <div class="footer-links-side">
-                <div class="footer-link-group">
-                    <h3>Product</h3>
-                    <a href="#features">Features</a>
-                    <a href="#comparison">Compare</a>
-                    <a href="https://apps.apple.com/app/break-reminder-step-away/id6754695723">App Store</a>
-                </div>
-                <div class="footer-link-group">
-                    <h3>Guides & Health</h3>
-                    <a href="guides/best-mac-break-timer-apps.html">Best Mac Break Timers</a>
-                    <a href="how-to-automate-20-20-20-rule-mac.html">Automate 20-20-20 Rule</a>
-                    <a href="reduce-computer-eye-strain-developers.html">Reduce Eye Strain for Devs</a>
-                </div>
-                <div class="footer-link-group">
-                    <h3>Legal & Privacy</h3>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="contact.html">Contact Us</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 StepAway. All rights reserved. macOS and App Store are trademarks of Apple Inc.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
-</body>
+<!-- Footer Section -->
+<footer class="footer">
+<div class="container footer-container">
+<div class="footer-brand-side">
+<div class="footer-logo">
+<img alt="StepAway Logo" class="footer-logo-img" decoding="async" height="32" loading="lazy" src="assets/app_icon.png" width="32"/>
+<span>StepAway</span>
+</div>
+<p class="footer-credit">Built natively for macOS to foster healthy workspaces.</p>
+</div>
+<div class="footer-links-side">
+<div class="footer-link-group">
+<h3>Product</h3>
+<a href="#features">Features</a>
+<a href="#comparison">Compare</a>
+<a href="https://apps.apple.com/app/break-reminder-step-away/id6754695723">App Store</a>
+</div>
+<div class="footer-link-group">
+<h3>Guides &amp; Health</h3>
+<a href="guides/best-mac-break-timer-apps.html">Best Mac Break Timers</a>
+<a href="how-to-automate-20-20-20-rule-mac.html">Automate 20-20-20 Rule</a>
+<a href="reduce-computer-eye-strain-developers.html">Reduce Eye Strain for Devs</a>
+</div>
+<div class="footer-link-group">
+<h3>Legal &amp; Privacy</h3>
+<a href="privacy.html">Privacy Policy</a>
+<a href="contact.html">Contact Us</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 StepAway. All rights reserved. macOS and App Store are trademarks of Apple Inc.</p>
+</div>
+</footer>
+<!-- Scripts -->
+<script src="script.js"></script>
+<script defer="" src="site-polish.js"></script></body>
 </html>
